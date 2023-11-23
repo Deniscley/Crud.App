@@ -1,0 +1,52 @@
+dotnet --version
+dotnet --list-sdks
+
+Criação de template dotnet com Razor
+dotnet new razor -o CrudTest -f [net7.0 || net8.0] --auth Individual
+
+Instalação para adicionar suporte ao Sqlite
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+
+Comando para instalação da ferramenta dotnet-ef
+dotnet tool install --global dotnet-ef
+
+Comando para trabalhar com as migrations
+dotnet ef migrations add [v1]
+
+Aplicar migração no banco
+dotnet ef database update
+
+Limpar projeto
+dotnet clean
+
+Compilar o projeto
+dotnet build
+
+Criar páginas baseado em um template com um comando no terminal, baseado em Create, Read, Update, Delete.
+dotnet tool install -g dotnet-aspnet-codegenerator
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+
+dotnet aspnet-codegenerator razorpage Create Create -m Student -dc ApplicationDbContext -sqlite -udl -outDir Pages/Students
+dotnet aspnet-codegenerator razorpage Edit Edit -m Student -dc ApplicationDbContext -sqlite -udl -outDir Pages/Students
+dotnet aspnet-codegenerator razorpage Delete Delete -m Student -dc ApplicationDbContext -sqlite -udl -outDir Pages/Students
+dotnet aspnet-codegenerator razorpage Details Details -m Student -dc ApplicationDbContext -sqlite -udl -outDir Pages/Students
+dotnet aspnet-codegenerator razorpage Index List -m Student -dc ApplicationDbContext -sqlite -udl -outDir Pages/Students
+
+dotnet aspnet-codegenerator razorpage Create Create -m Premium -dc ApplicationDbContext -sqlite -udl -outDir Pages/Premiums
+dotnet aspnet-codegenerator razorpage Edit Edit -m Premium -dc ApplicationDbContext -sqlite -udl -outDir Pages/Premiums
+dotnet aspnet-codegenerator razorpage Delete Delete -m Premium -dc ApplicationDbContext -sqlite -udl -outDir Pages/Premiums
+dotnet aspnet-codegenerator razorpage Details Details -m Premium -dc ApplicationDbContext -sqlite -udl -outDir Pages/Premiums
+dotnet aspnet-codegenerator razorpage Index List -m Premium -dc ApplicationDbContext -sqlite -udl -outDir Pages/Premiums
+
+--auth Individual - autenticação com asp.Net Identity
+[net7.0 || net8.0] - opção da versão do .Net que será utilizado
+[v1] - nome da versão do migration
+
+SQLite Compact Toolbox
+https://www.youtube.com/watch?v=7TpljNN0IvA
+
+CRUD para IMPRESSIONAR na entrevista
+https://www.youtube.com/watch?v=fmDYYsSXrKM&t=41s
+
+Como fazer uma API (Fácil e moderna) com ASP.NET, EF Core e SQLite
+https://www.youtube.com/watch?v=QzCSN9wN4JA&t=112s
