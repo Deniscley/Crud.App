@@ -42,11 +42,6 @@ dotnet aspnet-codegenerator razorpage Index List -m Premium -dc ApplicationDbCon
 [net7.0 || net8.0] - opção da versão do .Net que será utilizado
 [v1] - nome da versão do migration
 
-SQLite Compact Toolbox
+
 https://www.youtube.com/watch?v=7TpljNN0IvA
-
-CRUD para IMPRESSIONAR na entrevista
 https://www.youtube.com/watch?v=fmDYYsSXrKM&t=41s
-
-Como fazer uma API (Fácil e moderna) com ASP.NET, EF Core e SQLite
-https://www.youtube.com/watch?v=QzCSN9wN4JA&t=112s
