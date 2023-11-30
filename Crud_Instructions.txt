@@ -2,7 +2,7 @@ dotnet --version
 dotnet --list-sdks
 
 Criação de template dotnet com Razor
-dotnet new razor -o CrudTest -f [net7.0 || net8.0] --auth Individual
+dotnet new razor -o Crud -f [net7.0 || net8.0] --auth Individual
 
 Instalação para adicionar suporte ao Sqlite
 dotnet add package Microsoft.EntityFrameworkCore.Sqlite
